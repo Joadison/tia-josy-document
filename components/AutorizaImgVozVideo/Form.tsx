@@ -43,8 +43,8 @@ export function Forms() {
     };
 
     async function generatePDF() {
-        if (!formData.signature && formData.name && formData.cpf) {
-            alert("Adicione a assinatura antes de gerar o PDF");
+        if (!formData.signature && !formData.name && !formData.cpf) {
+            alert("Adicione a assinatura, nome e CPF, antes de gerar o PDF");
             return;
         }
 
